@@ -45,3 +45,20 @@ def outer_function():
 print("Nested Functions:")
 outer_function()
 print()
+ # 8. Recursion
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print("Recursion:")
+print(f"Factorial of 5: {factorial(5)}")
+print()
+
+# 9. Function Annotations
+def annotated_function(name: str, age: int) -> str:
+    return f"{name} is {age} years old."
+
+print("Function Annotations:")
+print(annotated_function("Alice", 30))
+print()
