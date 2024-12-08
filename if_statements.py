@@ -57,3 +57,24 @@ elif num < 0:
     print("The number is negative")
 else:
     print("The number is zero")
+
+    # 8. Grading system
+score = int(input("Enter your score: "))
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "F"
+print(f"Your grade is: {grade}")
+
+# 9. Leap year checker
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year")
+else:
+    print(f"{year} is not a leap year")
