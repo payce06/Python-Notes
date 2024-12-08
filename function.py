@@ -23,3 +23,25 @@ print("Default Arguments:")
 introduce("Alice")  # Uses default greeting
 introduce("Bob", "Hi")  # Custom greeting
 print()
+
+# 5. Lambda Functions
+square = lambda x: x**2
+add = lambda a, b: a + b
+
+print("Lambda Functions:")
+print(f"Square of 4: {square(4)}")
+print(f"Sum of 3 and 7: {add(3, 7)}")
+print()
+
+# 6. Nested Functions
+def outer_function():
+    print("Outer function")
+   
+    def inner_function():
+        print("Inner function")
+   
+    inner_function()
+
+print("Nested Functions:")
+outer_function()
+print()
