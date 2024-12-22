@@ -38,3 +38,20 @@ print("afterPop(age):", person, "| poppedValue:", age)  # {"name": "Alice", "cit
 lastItem = person.popitem()  # Removes and returns the last key-value pair
 print("afterPopitem:", person, "| poppedItem:", lastItem)
 print()
+
+# 3. Iterating Over Dictionaries
+print("IteratingOverDictionaries:")
+fruits = {"apple": 3, "banana": 5, "cherry": 2}
+
+# Keys
+for key in fruits:
+    print(f"key: {key}")
+
+# Values
+for value in fruits.values():
+    print(f"value: {value}")
+
+# Key-Value Pairs
+for key, value in fruits.items():
+    print(f"{key}: {value}")
+print()
