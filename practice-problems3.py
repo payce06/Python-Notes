@@ -32,3 +32,17 @@ def secondLargest(array):
             secondLargest = num
     return secondLargest
 
+
+# Example
+print(secondLargest([4, 1, 3, 2, 4]))  # Output: 3
+
+# 4. Write a function to remove duplicates from an array.
+def removeDuplicates(array):
+    uniqueArray = []
+    for item in array:
+        if item not in uniqueArray:
+            uniqueArray.append(item)
+    return uniqueArray
+
+# Example
+print(removeDuplicates([1, 2, 2, 3, 4, 4]))  # Output: [1, 2, 3, 4]
