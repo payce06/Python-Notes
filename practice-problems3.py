@@ -66,3 +66,35 @@ def arrayIntersection(array1, array2):
             if item1 == item2 and item1 not in intersection:
                 intersection.append(item1)
     return intersection
+
+
+# Example
+print(arrayIntersection([1, 2, 3], [2, 3, 4]))  # Output: [2, 3]
+
+# 7. Write a function to find the index of the first occurrence of an element in an array.
+def findIndex(array, target):
+    index = 0
+    for element in array:
+        if element == target:
+            return index
+        index += 1
+    return -1  # Return -1 if the element is not found
+
+# Example
+print(findIndex([1, 2, 3, 4, 5], 3))  # Output: 2
+print(findIndex([1, 2, 3, 4, 5], 6))  # Output: -1
+
+# 8. Write a function to flatten a nested array.
+def flattenArray(nestedArray):
+    flatArray = []
+    for item in nestedArray:
+        if isinstance(item, list):
+            subArray = flattenArray(item)
+            for subItem in subArray:
+                flatArray.append(subItem)
+        else:
+            flatArray.append(item)
+    return flatArray
+
+# Example
+print(flattenArray([1, [2, [3, 4], 5]]))  # Output: [1, 2, 3, 4, 5]
