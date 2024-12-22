@@ -41,3 +41,28 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
+# Example
+print(fibonacci(7))  # Output: 8
+
+# 6. Write a function to find the largest number in a list.
+def findLargest(numbers):
+    return max(numbers)
+
+# Example
+print(findLargest([1, 3, 7, 0, 5]))  # Output: 7
+
+# 7. Write a function to reverse a string.
+def reverseString(s):
+    return s[::-1]
+
+# Example
+print(reverseString("hello"))  # Output: "olleh"
+
+# 8. Write a function to count the number of vowels in a string.
+def countVowels(string):
+    vowels = "aeiouAEIOU"
+    vowelCount = 0
+    for ch in string:
+        if ch in vowels:
+            vowelCount += 1
+    return vowelCount
