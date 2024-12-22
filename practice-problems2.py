@@ -80,3 +80,29 @@ def multiplicationTable(n):
     for i in range(1, 11):
         table.append(f"{n} x {i} = {n * i}")
     return table
+
+# Example
+print("\n".join(multiplicationTable(5)))
+
+# 9. Write a function to calculate the sum of all odd numbers in a range.
+def sumOfOddNumbers(start, end):
+    total = 0
+    for num in range(start, end + 1):
+        if num % 2 != 0:
+            total += num
+    return total
+
+# Example
+print(sumOfOddNumbers(1, 10))  # Output: 25
+
+# 10. Write a function to check if a given number is prime.
+def isPrime(num):
+    if num <= 1:
+        return False
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
+# Example
+print(isPrime(17))  # Output: True
