@@ -46,3 +46,23 @@ def removeDuplicates(array):
 
 # Example
 print(removeDuplicates([1, 2, 2, 3, 4, 4]))  # Output: [1, 2, 3, 4]
+
+
+# 5. Write a function to reverse an array.
+def reverseArray(array):
+    reversedArray = []
+    for i in range(len(array) - 1, -1, -1):
+        reversedArray.append(array[i])
+    return reversedArray
+
+# Example
+print(reverseArray([1, 2, 3, 4]))  # Output: [4, 3, 2, 1]
+
+# 6. Write a function to find the intersection of two arrays.
+def arrayIntersection(array1, array2):
+    intersection = []
+    for item1 in array1:
+        for item2 in array2:
+            if item1 == item2 and item1 not in intersection:
+                intersection.append(item1)
+    return intersection
