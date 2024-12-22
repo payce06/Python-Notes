@@ -37,3 +37,24 @@ print("difference(B-A):", setB.difference(setA))  # {5, 6}
 # 3. Common Set Methods
 print("CommonSetMethods:")
 numbers = {1, 2, 3}
+
+# Add and Discard
+numbers.add(4)
+print("afterAdd(4):", numbers)  # {1, 2, 3, 4}
+numbers.discard(2)
+print("afterDiscard(2):", numbers)  # {1, 3, 4}
+
+# Pop
+popped = numbers.pop()  # Removes a random element
+print("afterPop:", numbers, "| poppedElement:", popped)
+
+# Clear
+numbers.clear()
+print("afterClear:", numbers)  # set()
+print()
+
+# 4. Iterating Over Sets
+print("IteratingOverSets:")
+fruits = {"Apple", "Banana", "Cherry"}
+for fruit in fruits:
+    print(fruit)
