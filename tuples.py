@@ -36,3 +36,19 @@ print("IteratingOverTuples:")
 fruits = ("Apple", "Banana", "Cherry")
 for fruit in fruits:
     print(fruit)
+
+# Using Enumerate
+for index, fruit in enumerate(fruits):
+    print(f"index {index}: {fruit}")
+print()
+
+# 5. Nested Tuples (2D Matrix)
+print("NestedTuples:")
+matrix = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+print("elementAt(1,1):", matrix[1][1])  # 5
+
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+    print()
+print()
