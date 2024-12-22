@@ -114,3 +114,23 @@ def uniqueElements(array):
 
 # Example
 print(uniqueElements([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 3, 5]
+
+
+# 10. Write a function to split an array into chunks of size n.
+def splitIntoChunks(array, n):
+    chunks = []
+    chunk = []
+    count = 0
+    for item in array:
+        chunk.append(item)
+        count += 1
+        if count == n:
+            chunks.append(chunk)
+            chunk = []
+            count = 0
+    if chunk:
+        chunks.append(chunk)
+    return chunks
+
+# Example
+print(splitIntoChunks([1, 2, 3, 4, 5, 6], 2))  # Output: [[1, 2], [3, 4], [5, 6]]
