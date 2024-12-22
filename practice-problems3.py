@@ -18,3 +18,17 @@ def sumOfElements(array):
 
 # Example
 print(sumOfElements([1, 2, 3, 4]))  # Output: 10
+
+
+# 3. Write a function to find the second largest element in an array.
+def secondLargest(array):
+    largest = None
+    secondLargest = None
+    for num in array:
+        if largest is None or num > largest:
+            secondLargest = largest
+            largest = num
+        elif secondLargest is None or (num > secondLargest and num != largest):
+            secondLargest = num
+    return secondLargest
+
