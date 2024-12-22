@@ -36,3 +36,26 @@ numbers.append(10)
 print("afterAppend:", numbers)  # [4, 2, 8, 6, 2, 10]
 numbers.extend([20, 30])
 print("afterExtend:", numbers)  # [4, 2, 8, 6, 2, 10, 20, 30]
+
+# Insert
+numbers.insert(1, 99)
+print("afterInsert:", numbers)  # [4, 99, 2, ...]
+
+# Remove and Pop
+numbers.remove(2)
+print("afterRemove(2):", numbers)
+last = numbers.pop()
+print("afterPop:", numbers, "| poppedElement:", last)
+
+# Sort and Reverse
+numbers.sort()
+print("afterSort:", numbers)  # [4, 6, 8, ...]
+numbers.reverse()
+print("afterReverse:", numbers)  # [..., 8, 6, 4]
+print()
+
+# 4. Iterating Over Lists
+print("IteratingOverLists:")
+fruits = ["Apple", "Banana", "Cherry"]
+for fruit in fruits:
+    print(fruit)
