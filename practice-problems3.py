@@ -98,3 +98,19 @@ def flattenArray(nestedArray):
 
 # Example
 print(flattenArray([1, [2, [3, 4], 5]]))  # Output: [1, 2, 3, 4, 5]
+
+
+# 9. Write a function to find all unique elements in an array.
+def uniqueElements(array):
+    uniqueArray = []
+    for item in array:
+        count = 0
+        for otherItem in array:
+            if item == otherItem:
+                count += 1
+        if count == 1:
+            uniqueArray.append(item)
+    return uniqueArray
+
+# Example
+print(uniqueElements([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 3, 5]
