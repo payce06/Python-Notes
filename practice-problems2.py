@@ -37,3 +37,46 @@ def sumOfList(numbers):
     for num in numbers:
         total += num
     return total
+
+# Example
+print(sumOfList([1, 2, 3, 4, 5]))  # Output: 15
+
+# 5. Write a function to print all even numbers in a range.
+def evenNumbersInRange(start, end):
+    evens = []
+    for num in range(start, end + 1):
+        if num % 2 == 0:
+            evens.append(num)
+    return evens
+
+# Example
+print(evenNumbersInRange(1, 10))  # Output: [2, 4, 6, 8, 10]
+
+# 6. Write a function to count the occurrences of a specific element in a list.
+def countOccurrences(numbers, target):
+    count = 0
+    for num in numbers:
+        if num == target:
+            count += 1
+    return count
+
+# Example
+print(countOccurrences([1, 2, 2, 3, 4, 2], 2))  # Output: 3
+
+# 7. Write a function to find the smallest number in a list using a for loop.
+def findSmallest(numbers):
+    smallest = numbers[0]
+    for num in numbers:
+        if num < smallest:
+            smallest = num
+    return smallest
+
+# Example
+print(findSmallest([3, 1, 4, 1, 5]))  # Output: 1
+
+# 8. Write a function to print the multiplication table of a number.
+def multiplicationTable(n):
+    table = []
+    for i in range(1, 11):
+        table.append(f"{n} x {i} = {n * i}")
+    return table
