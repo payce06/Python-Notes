@@ -66,3 +66,22 @@ def countVowels(string):
         if ch in vowels:
             vowelCount += 1
     return vowelCount
+
+# Example
+print(countVowels("Python Programming"))  # Output: 4
+
+# 9. Write a function to convert Celsius to Fahrenheit.
+def celsiusToFahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+# Example
+print(celsiusToFahrenheit(25))  # Output: 77.0
+
+# 10. Write a function to find the GCD of two numbers.
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+# Example
+print(gcd(48, 18))  # Output: 6
