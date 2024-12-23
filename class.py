@@ -15,3 +15,20 @@ class Dog:
 
 # Creating an instance of the Dog class
 my_dog = Dog("Buddy", 3)
+
+
+# Accessing object methods
+my_dog.bark()  # Output: Buddy says Woof!
+my_dog.get_age()  # Output: Buddy is 3 years old.
+
+# ==============================================================================
+# Example 2: Inheritance
+# Inheritance allows us to define a class that inherits methods and attributes from another class.
+
+# Base class (parent class)
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        raise NotImplementedError("Subclass must implement abstract method")
