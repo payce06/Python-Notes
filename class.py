@@ -108,3 +108,24 @@ truck.display_info()  # Output: Truck: Ford F-150 with a payload capacity of 300
 
 # Example 4: Using the `super()` function
 # The `super()` function allows us to call methods from the parent class in the derived class.
+
+
+class AnimalWithSuper:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound.")
+
+class DogWithSuper(AnimalWithSuper):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Using super() to call the parent class constructor
+        self.breed = breed
+
+    def speak(self):
+        super().speak()  # Calling the parent class speak method
+        print(f"{self.name} the {self.breed} says Woof!")
+
+# Creating an instance of DogWithSuper
+dog = DogWithSuper("Rex", "Golden Retriever")
+dog.speak()  # Output: Rex makes a sound. Rex the Golden Retriever says Woof!
