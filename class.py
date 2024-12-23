@@ -72,3 +72,22 @@ class Vehicle:
     def __init__(self, make, model):
         self.make = make
         self.model = model
+
+    def display_info(self):
+        print(f"Vehicle: {self.make} {self.model}")
+
+# Derived class (child class)
+class Car(Vehicle):
+    def __init__(self, make, model, doors):
+        super().__init__(make, model)  # Calling the parent class constructor
+        self.doors = doors
+
+    # Overriding the display_info method
+    def display_info(self):
+        print(f"Car: {self.make} {self.model} with {self.doors} doors")
+
+# Derived class (another child class)
+class Truck(Vehicle):
+    def __init__(self, make, model, payload_capacity):
+        super().__init__(make, model)  # Calling the parent class constructor
+        self.payload_capacity = payload_capacity
