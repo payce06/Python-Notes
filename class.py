@@ -53,3 +53,22 @@ class Cat(Animal):
     # Overriding the speak method
     def speak(self):
         print(f"{self.name} the {self.color} cat says Meow!")
+
+# Creating instances of derived classes
+dog = DogInherited("Rex", "German Shepherd")
+cat = Cat("Whiskers", "black")
+
+# Accessing methods from derived classes
+dog.speak()  # Output: Rex the German Shepherd says Woof!
+cat.speak()  # Output: Whiskers the black cat says Meow!
+
+# ==============================================================================
+
+# Example 3: Demonstrating Method Overriding
+# Inheritance allows derived classes to override methods from the parent class.
+
+# Base class (parent class)
+class Vehicle:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
