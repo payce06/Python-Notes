@@ -16,7 +16,6 @@ class Dog:
 # Creating an instance of the Dog class
 my_dog = Dog("Buddy", 3)
 
-
 # Accessing object methods
 my_dog.bark()  # Output: Buddy says Woof!
 my_dog.get_age()  # Output: Buddy is 3 years old.
@@ -32,7 +31,6 @@ class Animal:
 
     def speak(self):
         raise NotImplementedError("Subclass must implement abstract method")
-
 
 # Derived class (child class)
 class DogInherited(Animal):
@@ -92,7 +90,7 @@ class Truck(Vehicle):
         super().__init__(make, model)  # Calling the parent class constructor
         self.payload_capacity = payload_capacity
 
-        # Overriding the display_info method
+    # Overriding the display_info method
     def display_info(self):
         print(f"Truck: {self.make} {self.model} with a payload capacity of {self.payload_capacity} kg")
 
@@ -108,7 +106,6 @@ truck.display_info()  # Output: Truck: Ford F-150 with a payload capacity of 300
 
 # Example 4: Using the `super()` function
 # The `super()` function allows us to call methods from the parent class in the derived class.
-
 
 class AnimalWithSuper:
     def __init__(self, name):
@@ -129,3 +126,20 @@ class DogWithSuper(AnimalWithSuper):
 # Creating an instance of DogWithSuper
 dog = DogWithSuper("Rex", "Golden Retriever")
 dog.speak()  # Output: Rex makes a sound. Rex the Golden Retriever says Woof!
+
+# ==============================================================================
+
+# Example 5: The `issubclass()` function
+# We can use `issubclass()` to check if a class is a subclass of another class.
+
+print(issubclass(DogInherited, Animal))  # Output: True
+print(issubclass(Cat, DogInherited))  # Output: False
+
+
+# Example 6: The `isinstance()` function
+# We can use `isinstance()` to check if an object is an instance of a class or a subclass of a class.
+
+dog_instance = DogInherited("Max", "Labrador")
+print(isinstance(dog_instance, DogInherited))  # Output: True
+print(isinstance(dog_instance, Animal))  # Output: True
+print(isinstance(dog_instance, Cat))  # Output: False
