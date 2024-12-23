@@ -32,3 +32,24 @@ class Animal:
 
     def speak(self):
         raise NotImplementedError("Subclass must implement abstract method")
+
+
+# Derived class (child class)
+class DogInherited(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Calling the parent class constructor
+        self.breed = breed
+
+    # Overriding the speak method
+    def speak(self):
+        print(f"{self.name} the {self.breed} says Woof!")
+
+# Derived class (another child class)
+class Cat(Animal):
+    def __init__(self, name, color):
+        super().__init__(name)  # Calling the parent class constructor
+        self.color = color
+
+    # Overriding the speak method
+    def speak(self):
+        print(f"{self.name} the {self.color} cat says Meow!")
