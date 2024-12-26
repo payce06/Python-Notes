@@ -15,7 +15,7 @@ class Course:
 
     def display_students(self):
         """Display all students in the course."""
-    print(f"Course: {self.course_name} ({self.course_code})")
+        print(f"Course: {self.course_name} ({self.course_code})")
         print("Enrolled Students:")
         for student in self.students:
             print(f"- {student.name} (ID: {student.student_id})")
@@ -30,7 +30,7 @@ class Student:
 
     def enroll_in_course(self, course):
         """Enroll the student in a course."""
-     if course.course_code not in self.courses:
+        if course.course_code not in self.courses:
             self.courses[course.course_code] = []
             course.enroll_student(self)
         else:
@@ -45,8 +45,8 @@ class Student:
                 print("Invalid grade. Please enter a grade between 0 and 100.")
         else:
             print(f"Student is not enrolled in the course with code {course_code}.")
-        
-        def calculate_gpa(self):
+
+    def calculate_gpa(self):
         """Calculate and return the GPA."""
         total_grades = 0
         total_courses = 0
@@ -63,7 +63,6 @@ class Student:
         print(f"Student ID: {self.student_id}")
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
-
         print("Courses and Grades:")
         for course_code, grades in self.courses.items():
             print(f"  {course_code}: {grades} (Average: {sum(grades) / len(grades) if grades else 0:.2f})")
@@ -82,8 +81,8 @@ class StudentManagementSystem:
             print(f"Student {student.name} added to the system.")
         else:
             print(f"Student ID {student.student_id} already exists.")
-        
-        def add_course(self, course):
+
+    def add_course(self, course):
         """Add a course to the system."""
         if course.course_code not in self.courses:
             self.courses[course.course_code] = course
@@ -102,8 +101,6 @@ class StudentManagementSystem:
 
 # Main Program
 if __name__ == "__main__":
-
-    
     # Create the management system
     sms = StudentManagementSystem()
 
