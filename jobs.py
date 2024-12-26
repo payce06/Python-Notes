@@ -68,3 +68,23 @@ class JobApplicationSystem:
     def add_job_posting(self, job_posting):
         """Add a job posting to the system."""
         if job_posting.job_id not in self.job_postings:
+    
+    
+            self.job_postings[job_posting.job_id] = job_posting
+            print(f"Job {job_posting.job_title} at {job_posting.company_name} added to the system.")
+        else:
+            print(f"Job ID {job_posting.job_id} already exists.")
+
+    def display_all_jobs(self):
+        """Display all job postings."""
+        for job in self.job_postings.values():
+            print(f"{job.job_title} at {job.company_name} (ID: {job.job_id}) - Skills Required: {', '.join(job.skills_required)}")
+
+    def display_all_engineers(self):
+        """Display all engineers in the system."""
+        for engineer in self.engineers.values():
+            engineer.display_profile()
+
+# Main Program
+if __name__ == "__main__":
+    # Create the job application system
