@@ -14,7 +14,7 @@ def play_game():
         try:
             # Take user input
             guess = int(input(f"Attempt {attempts + 1}/{max_attempts}: Make a guess: "))
-
+           
             # Check the guess
             if guess == secret_number:
                 print(f"Congratulations! You guessed the exact number in {attempts + 1} attempts!")
@@ -30,3 +30,18 @@ def play_game():
             attempts += 1
         except ValueError:
             print("Please enter a valid number.")
+   
+    # If the user runs out of attempts
+    if attempts == max_attempts and abs(guess - secret_number) > 5:
+        print(f"Sorry, you've used all your attempts. The correct number was {secret_number}.")
+   
+    # Ask to play again
+    play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+    if play_again == "yes":
+        play_game()
+    else:
+        print("Thanks for playing! Goodbye!")
+
+# Run the game
+if __name__ == "__main__":
+    play_game()
