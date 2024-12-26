@@ -51,3 +51,20 @@ class SoftwareEngineer:
 
 class JobApplicationSystem:
     def __init__(self):
+    
+    
+        """Initialize the Job Application System."""
+        self.engineers = {}
+        self.job_postings = {}
+
+    def add_engineer(self, engineer):
+        """Add an engineer to the system."""
+        if engineer.engineer_id not in self.engineers:
+            self.engineers[engineer.engineer_id] = engineer
+            print(f"Engineer {engineer.name} added to the system.")
+        else:
+            print(f"Engineer ID {engineer.engineer_id} already exists.")
+
+    def add_job_posting(self, job_posting):
+        """Add a job posting to the system."""
+        if job_posting.job_id not in self.job_postings:
