@@ -15,7 +15,7 @@ class JobPosting:
         else:
             print(f"{engineer.name} has already applied for {self.job_title} at {self.company_name}.")
 
-def display_applicants(self):
+    def display_applicants(self):
         """Display all applicants for the job."""
         print(f"Job: {self.job_title} at {self.company_name} (ID: {self.job_id})")
         print("Applicants:")
@@ -32,8 +32,6 @@ class SoftwareEngineer:
 
     def apply_to_job(self, job_posting):
         """Apply for a job."""
-    
-    
         if job_posting.job_id not in self.applications:
             job_posting.add_applicant(self)
             self.applications.append(job_posting.job_id)
@@ -51,8 +49,6 @@ class SoftwareEngineer:
 
 class JobApplicationSystem:
     def __init__(self):
-    
-    
         """Initialize the Job Application System."""
         self.engineers = {}
         self.job_postings = {}
@@ -68,8 +64,6 @@ class JobApplicationSystem:
     def add_job_posting(self, job_posting):
         """Add a job posting to the system."""
         if job_posting.job_id not in self.job_postings:
-    
-    
             self.job_postings[job_posting.job_id] = job_posting
             print(f"Job {job_posting.job_title} at {job_posting.company_name} added to the system.")
         else:
@@ -88,8 +82,6 @@ class JobApplicationSystem:
 # Main Program
 if __name__ == "__main__":
     # Create the job application system
-
-    
     system = JobApplicationSystem()
 
     # Create job postings
@@ -112,3 +104,18 @@ if __name__ == "__main__":
     engineer1.apply_to_job(job1)
     engineer1.apply_to_job(job2)
     engineer2.apply_to_job(job2)
+
+    # Display all jobs
+    print("\nAll Job Postings:")
+    system.display_all_jobs()
+
+    # Display all engineers
+    print("\nAll Engineers:")
+    system.display_all_engineers()
+
+    # Display applicants for a job
+    print("\nApplicants for Software Engineer at TechCorp:")
+    job1.display_applicants()
+
+    print("\nApplicants for Frontend Developer at Webify:")
+    job2.display_applicants()
