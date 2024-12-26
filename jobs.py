@@ -32,3 +32,22 @@ class SoftwareEngineer:
 
     def apply_to_job(self, job_posting):
         """Apply for a job."""
+    
+    
+        if job_posting.job_id not in self.applications:
+            job_posting.add_applicant(self)
+            self.applications.append(job_posting.job_id)
+        else:
+            print(f"{self.name} has already applied for {job_posting.job_title} at {job_posting.company_name}.")
+
+    def display_profile(self):
+        """Display the engineer's profile."""
+        print(f"Engineer ID: {self.engineer_id}")
+        print(f"Name: {self.name}")
+        print("Skills: " + ", ".join(self.skills))
+        print("Applied Jobs:")
+        for job_id in self.applications:
+            print(f"- Job ID: {job_id}")
+
+class JobApplicationSystem:
+    def __init__(self):
