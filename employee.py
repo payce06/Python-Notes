@@ -26,3 +26,17 @@ class Employee:
 class Manager(Employee):
     def __init__(self, first_name, last_name, age, salary, department):
         super().__init__(first_name, last_name, age, salary)
+self.department = department
+        self.employees = []
+
+    # Add employee to manager's list of employees
+    def add_employee(self, employee):
+        if isinstance(employee, Employee):
+            self.employees.append(employee)
+            print(f"{employee.get_full_name()} added to {self.get_full_name()}'s team.")
+        else:
+            print("Only employees can be added.")
+   
+    # Display manager's team
+    def display_team(self):
+        print(f"{self.get_full_name()}'s Team:")
