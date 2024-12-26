@@ -67,4 +67,18 @@ class Department:
         for manager in self.managers:
             manager.display_employee_info()
 
-# Create employee objects
+# Create employee object
+
+employee1 = Employee("John", "Doe", 30, 50000)
+employee2 = Employee("Jane", "Smith", 28, 55000)
+employee3 = Employee("Alice", "Johnson", 35, 60000)
+
+# Create a manager object
+manager1 = Manager("Michael", "Brown", 40, 80000, "IT")
+manager2 = Manager("Sara", "Dave", 38, 85000, "HR")
+
+# Create a department object
+it_department = Department("IT")
+hr_department = Department("HR")
+
+# Add employees to managers
