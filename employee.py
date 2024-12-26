@@ -53,4 +53,18 @@ class Department:
     def __init__(self, name):
         self.name = name
         self.managers = []
-   
+# Add manager to department
+    def add_manager(self, manager):
+        if isinstance(manager, Manager):
+            self.managers.append(manager)
+            print(f"{manager.get_full_name()} added to {self.name} department.")
+        else:
+            print("Only managers can be added.")
+
+    # Display all managers in the department
+    def display_department_info(self):
+        print(f"Department: {self.name}")
+        for manager in self.managers:
+            manager.display_employee_info()
+
+# Create employee objects
