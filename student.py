@@ -82,3 +82,23 @@ class StudentManagementSystem:
             print(f"Student {student.name} added to the system.")
         else:
             print(f"Student ID {student.student_id} already exists.")
+        
+        def add_course(self, course):
+        """Add a course to the system."""
+        if course.course_code not in self.courses:
+            self.courses[course.course_code] = course
+            print(f"Course {course.course_name} added to the system.")
+        else:
+            print(f"Course Code {course.course_code} already exists.")
+
+    def search_student(self, student_id):
+        """Search for a student by their ID."""
+        return self.students.get(student_id, None)
+
+    def display_all_students(self):
+        """Display all students in the system."""
+        for student in self.students.values():
+            student.display_info()
+
+# Main Program
+if __name__ == "__main__":
