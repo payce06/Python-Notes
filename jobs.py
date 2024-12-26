@@ -88,3 +88,27 @@ class JobApplicationSystem:
 # Main Program
 if __name__ == "__main__":
     # Create the job application system
+
+    
+    system = JobApplicationSystem()
+
+    # Create job postings
+    job1 = JobPosting("Software Engineer", "JOB101", "TechCorp", ["Python", "Django", "SQL"])
+    job2 = JobPosting("Frontend Developer", "JOB102", "Webify", ["JavaScript", "React", "CSS"])
+
+    # Add job postings to the system
+    system.add_job_posting(job1)
+    system.add_job_posting(job2)
+
+    # Create software engineers
+    engineer1 = SoftwareEngineer("Alice Johnson", "ENG123", ["Python", "Django", "Flask"])
+    engineer2 = SoftwareEngineer("Bob Smith", "ENG456", ["JavaScript", "React", "Node.js"])
+
+    # Add engineers to the system
+    system.add_engineer(engineer1)
+    system.add_engineer(engineer2)
+
+    # Engineers apply for jobs
+    engineer1.apply_to_job(job1)
+    engineer1.apply_to_job(job2)
+    engineer2.apply_to_job(job2)
