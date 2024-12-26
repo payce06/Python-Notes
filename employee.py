@@ -40,3 +40,17 @@ self.department = department
     # Display manager's team
     def display_team(self):
         print(f"{self.get_full_name()}'s Team:")
+for employee in self.employees:
+            employee.display_employee_info()
+
+    # Override method to display manager details
+    def display_employee_info(self):
+        super().display_employee_info()
+        print(f"Department: {self.department}")
+
+# Department class
+class Department:
+    def __init__(self, name):
+        self.name = name
+        self.managers = []
+   
