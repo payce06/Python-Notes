@@ -102,3 +102,40 @@ class StudentManagementSystem:
 
 # Main Program
 if __name__ == "__main__":
+
+    
+    # Create the management system
+    sms = StudentManagementSystem()
+
+    # Create courses
+    course1 = Course("Mathematics", "MATH101")
+    course2 = Course("Computer Science", "CS101")
+
+    # Add courses to the system
+    sms.add_course(course1)
+    sms.add_course(course2)
+
+    # Create students
+    student1 = Student("Alice Johnson", 20, "S12345")
+    student2 = Student("Bob Smith", 22, "S67890")
+
+    # Add students to the system
+    sms.add_student(student1)
+    sms.add_student(student2)
+
+    # Enroll students in courses
+    student1.enroll_in_course(course1)
+    student1.enroll_in_course(course2)
+    student2.enroll_in_course(course1)
+
+    # Add grades
+    student1.add_grade("MATH101", 95)
+    student1.add_grade("CS101", 88)
+    student2.add_grade("MATH101", 72)
+
+    # Display information
+    print("\nAll Students:")
+    sms.display_all_students()
+
+    print("\nStudents in Mathematics:")
+    course1.display_students()
