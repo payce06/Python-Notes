@@ -63,3 +63,22 @@ class Student:
         print(f"Student ID: {self.student_id}")
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
+
+        print("Courses and Grades:")
+        for course_code, grades in self.courses.items():
+            print(f"  {course_code}: {grades} (Average: {sum(grades) / len(grades) if grades else 0:.2f})")
+        print(f"GPA: {self.calculate_gpa():.2f}")
+
+class StudentManagementSystem:
+    def __init__(self):
+        """Initialize the Student Management System."""
+        self.students = {}
+        self.courses = {}
+
+    def add_student(self, student):
+        """Add a student to the system."""
+        if student.student_id not in self.students:
+            self.students[student.student_id] = student
+            print(f"Student {student.name} added to the system.")
+        else:
+            print(f"Student ID {student.student_id} already exists.")
