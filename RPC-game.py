@@ -20,7 +20,8 @@ def play_game():
             if player_input not in moves:
                 print("Invalid input! Please enter 1, 2, or 3.")
                 continue
-                player_move = moves[player_input]
+           
+            player_move = moves[player_input]
             # Computer's move
             computer_move = moves[random.randint(1, 3)]
            
@@ -46,3 +47,16 @@ def play_game():
         except ValueError:
             print("Invalid input! Please enter a number (1, 2, or 3).")
             continue
+
+    # Determine the overall winner
+    print("Game Over!")
+    if player_score > computer_score:
+        print(f"Congratulations! You won the game with a score of {player_score} to {computer_score}!")
+    elif computer_score > player_score:
+        print(f"Sorry, the computer won with a score of {computer_score} to {player_score}. Better luck next time!")
+    else:
+        print(f"It's a tie! Both scored {player_score}.")
+
+# Run the game
+if __name__ == "__main__":
+    play_game()
