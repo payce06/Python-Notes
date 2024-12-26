@@ -11,7 +11,6 @@ class Employee:
         return f"{self.first_name} {self.last_name}"
 
     # Method to display employee details
-
     def display_employee_info(self):
         print(f"Employee: {self.get_full_name()}")
         print(f"Age: {self.age}")
@@ -26,7 +25,7 @@ class Employee:
 class Manager(Employee):
     def __init__(self, first_name, last_name, age, salary, department):
         super().__init__(first_name, last_name, age, salary)
-self.department = department
+        self.department = department
         self.employees = []
 
     # Add employee to manager's list of employees
@@ -40,7 +39,7 @@ self.department = department
     # Display manager's team
     def display_team(self):
         print(f"{self.get_full_name()}'s Team:")
-for employee in self.employees:
+        for employee in self.employees:
             employee.display_employee_info()
 
     # Override method to display manager details
@@ -53,7 +52,8 @@ class Department:
     def __init__(self, name):
         self.name = name
         self.managers = []
-# Add manager to department
+   
+    # Add manager to department
     def add_manager(self, manager):
         if isinstance(manager, Manager):
             self.managers.append(manager)
@@ -67,8 +67,7 @@ class Department:
         for manager in self.managers:
             manager.display_employee_info()
 
-# Create employee object
-
+# Create employee objects
 employee1 = Employee("John", "Doe", 30, 50000)
 employee2 = Employee("Jane", "Smith", 28, 55000)
 employee3 = Employee("Alice", "Johnson", 35, 60000)
@@ -82,8 +81,6 @@ it_department = Department("IT")
 hr_department = Department("HR")
 
 # Add employees to managers
-
-
 manager1.add_employee(employee1)
 manager1.add_employee(employee2)
 manager2.add_employee(employee3)
@@ -97,3 +94,18 @@ hr_department.add_manager(manager2)
 
 # Display all details
 print()
+print()
+print()
+it_department.display_department_info()
+print()
+print()
+print()
+hr_department.display_department_info()
+print()
+print()
+print()
+# Increase salary of an employee
+employee1.increase_salary(5000)
+
+# Display updated information
+it_department.display_department_info()
