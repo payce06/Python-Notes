@@ -15,3 +15,18 @@ class Course:
 
     def display_students(self):
         """Display all students in the course."""
+    print(f"Course: {self.course_name} ({self.course_code})")
+        print("Enrolled Students:")
+        for student in self.students:
+            print(f"- {student.name} (ID: {student.student_id})")
+
+class Student:
+    def __init__(self, name, age, student_id):
+        """Initialize the Student object."""
+        self.name = name
+        self.age = age
+        self.student_id = student_id
+        self.courses = {}  # Dictionary to store courses and their grades
+
+    def enroll_in_course(self, course):
+        """Enroll the student in a course."""
