@@ -30,3 +30,18 @@ class Student:
 
     def enroll_in_course(self, course):
         """Enroll the student in a course."""
+     if course.course_code not in self.courses:
+            self.courses[course.course_code] = []
+            course.enroll_student(self)
+        else:
+            print(f"{self.name} is already enrolled in {course.course_name}.")
+
+    def add_grade(self, course_code, grade):
+        """Add a grade for a specific course."""
+        if course_code in self.courses:
+            if 0 <= grade <= 100:
+                self.courses[course_code].append(grade)
+            else:
+                print("Invalid grade. Please enter a grade between 0 and 100.")
+        else:
+            print(f"Student is not enrolled in the course with code {course_code}.")
