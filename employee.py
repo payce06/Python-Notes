@@ -82,3 +82,18 @@ it_department = Department("IT")
 hr_department = Department("HR")
 
 # Add employees to managers
+
+
+manager1.add_employee(employee1)
+manager1.add_employee(employee2)
+manager2.add_employee(employee3)
+print()
+print()
+print()
+
+# Add managers to departments
+it_department.add_manager(manager1)
+hr_department.add_manager(manager2)
+
+# Display all details
+print()
