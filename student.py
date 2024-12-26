@@ -45,3 +45,21 @@ class Student:
                 print("Invalid grade. Please enter a grade between 0 and 100.")
         else:
             print(f"Student is not enrolled in the course with code {course_code}.")
+        
+        def calculate_gpa(self):
+        """Calculate and return the GPA."""
+        total_grades = 0
+        total_courses = 0
+        for grades in self.courses.values():
+            if grades:
+                total_grades += sum(grades)
+                total_courses += len(grades)
+        if total_courses == 0:
+            return 0
+        return total_grades / total_courses
+
+    def display_info(self):
+        """Display the student's information."""
+        print(f"Student ID: {self.student_id}")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
