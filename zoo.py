@@ -34,3 +34,21 @@ class Zoo:
     def add_animal(self, animal):
         self.animals.append(animal)
         print(f"Added {animal.name} to the zoo.")
+    
+    def remove_animal(self, animal_name):
+        for animal in self.animals:
+            if animal.name == animal_name:
+                self.animals.remove(animal)
+                print(f"Removed {animal.name} from the zoo.")
+                return
+        print(f"Animal with name {animal_name} not found.")
+
+    def show_animals(self):
+        print("\nAnimals in the Zoo:")
+        for animal in self.animals:
+            print(animal)
+
+    def feed_all(self):
+        for animal in self.animals:
+            food = random.choice(["grass", "meat", "fruits"])
+            animal.feed(food)
