@@ -75,3 +75,23 @@ class Restaurant:
     def register_customer(self, customer):
         """Register a customer in the restaurant."""
         self.customers.append(customer)
+    
+    print(f"Customer {customer.name} has been registered.")
+
+    def display_menu(self):
+        """Display the restaurant's menu."""
+        print("\nRestaurant Menu:")
+        for item in self.menu:
+            print(item)
+
+    def display_employees(self):
+        """Display all employees in the restaurant."""
+        print("\nRestaurant Employees:")
+        for employee in self.employees:
+            employee.display_info()
+
+    def display_customers(self):
+        """Display all customers in the restaurant."""
+        print("\nRestaurant Customers:")
+        for customer in self.customers:
+            print(f"- {customer.name}")
