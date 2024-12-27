@@ -33,7 +33,8 @@ class Customer:
         self.name = name
         self.customer_id = customer_id
         self.orders = []
-        def place_order(self, menu_item):
+
+    def place_order(self, menu_item):
         """Place an order for a menu item."""
         self.orders.append(menu_item)
         print(f"{self.name} has placed an order for {menu_item.name}.")
@@ -55,7 +56,6 @@ class Restaurant:
 
     def add_menu_item(self, menu_item):
         """Add a menu item to the restaurant's menu."""
-    
         self.menu.append(menu_item)
         print(f"Added {menu_item.name} to the menu.")
 
@@ -75,8 +75,7 @@ class Restaurant:
     def register_customer(self, customer):
         """Register a customer in the restaurant."""
         self.customers.append(customer)
-    
-    print(f"Customer {customer.name} has been registered.")
+        print(f"Customer {customer.name} has been registered.")
 
     def display_menu(self):
         """Display the restaurant's menu."""
@@ -95,7 +94,8 @@ class Restaurant:
         print("\nRestaurant Customers:")
         for customer in self.customers:
             print(f"- {customer.name}")
-    # Main function
+
+# Main function
 def main():
     print("Welcome to the Restaurant Management System!")
     restaurant = Restaurant("Gourmet Bistro")
@@ -116,7 +116,6 @@ def main():
 
     # Registering employees
     restaurant.register_employee(chef)
-    
     restaurant.register_employee(waiter)
 
     # Creating customers
@@ -134,3 +133,36 @@ def main():
 
     # Displaying restaurant details
     while True:
+        print("\nMenu:")
+        print("1. Display Menu")
+        print("2. Display Employees")
+        print("3. Display Customers")
+        print("4. View Customer Orders")
+        print("5. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            restaurant.display_menu()
+        elif choice == "2":
+            restaurant.display_employees()
+        elif choice == "3":
+            restaurant.display_customers()
+        elif choice == "4":
+            customer_name = input("Enter customer name: ")
+            found = False
+            for customer in restaurant.customers:
+                if customer.name == customer_name:
+                    customer.view_orders()
+                    found = True
+                    break
+            if not found:
+                print(f"Customer {customer_name} not found.")
+        elif choice == "5":
+            print("Exiting the Restaurant Management System. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
