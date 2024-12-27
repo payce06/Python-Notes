@@ -116,3 +116,21 @@ def main():
 
     # Registering employees
     restaurant.register_employee(chef)
+    
+    restaurant.register_employee(waiter)
+
+    # Creating customers
+    customer1 = Customer("Alice Williams", "C001")
+    customer2 = Customer("Bob Davis", "C002")
+
+    # Registering customers
+    restaurant.register_customer(customer1)
+    restaurant.register_customer(customer2)
+
+    # Customers place orders
+    customer1.place_order(pizza)
+    customer1.place_order(salad)
+    customer2.place_order(pasta)
+
+    # Displaying restaurant details
+    while True:
