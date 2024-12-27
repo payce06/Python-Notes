@@ -33,3 +33,25 @@ class Customer:
         self.name = name
         self.customer_id = customer_id
         self.orders = []
+        def place_order(self, menu_item):
+        """Place an order for a menu item."""
+        self.orders.append(menu_item)
+        print(f"{self.name} has placed an order for {menu_item.name}.")
+
+    def view_orders(self):
+        """View all orders placed by the customer."""
+        print(f"{self.name}'s Orders:")
+        for order in self.orders:
+            print(f"- {order.name} (${order.price})")
+
+# Restaurant class
+class Restaurant:
+    def __init__(self, name):
+        """Initialize the Restaurant object."""
+        self.name = name
+        self.menu = []
+        self.employees = []
+        self.customers = []
+
+    def add_menu_item(self, menu_item):
+        """Add a menu item to the restaurant's menu."""
