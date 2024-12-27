@@ -95,3 +95,24 @@ class Restaurant:
         print("\nRestaurant Customers:")
         for customer in self.customers:
             print(f"- {customer.name}")
+    # Main function
+def main():
+    print("Welcome to the Restaurant Management System!")
+    restaurant = Restaurant("Gourmet Bistro")
+
+    # Creating menu items
+    pizza = MenuItem("Margherita Pizza", "M001", "Main Course", 12.99)
+    pasta = MenuItem("Spaghetti Carbonara", "M002", "Main Course", 14.99)
+    salad = MenuItem("Caesar Salad", "M003", "Appetizer", 7.99)
+
+    # Adding menu items to the restaurant
+    restaurant.add_menu_item(pizza)
+    restaurant.add_menu_item(pasta)
+    restaurant.add_menu_item(salad)
+
+    # Creating employees
+    chef = Employee("Gordon Ramsay", "E001", "Chef")
+    waiter = Employee("Rachel Green", "E002", "Waiter")
+
+    # Registering employees
+    restaurant.register_employee(chef)
