@@ -15,7 +15,7 @@ class Animal:
     def check_health(self):
         if self.health >= 70:
             status = "healthy"
-    elif 40 <= self.health < 70:
+        elif 40 <= self.health < 70:
             status = "moderate"
         else:
             status = "poor"
@@ -34,7 +34,7 @@ class Zoo:
     def add_animal(self, animal):
         self.animals.append(animal)
         print(f"Added {animal.name} to the zoo.")
-    
+
     def remove_animal(self, animal_name):
         for animal in self.animals:
             if animal.name == animal_name:
@@ -53,7 +53,6 @@ class Zoo:
             food = random.choice(["grass", "meat", "fruits"])
             animal.feed(food)
 
-
     def check_all_health(self):
         print("\nHealth Status of All Animals:")
         for animal in self.animals:
@@ -71,8 +70,8 @@ class Zookeeper:
     def check_animal_health(self, animal):
         health_status = animal.check_health()
         print(f"{self.name} checked {animal.name}'s health: {health_status}.")
-    
-    # Main function
+
+# Main function
 def main():
     print("Welcome to the Zoo Management System!")
     zoo = Zoo("Sunnyvale Zoo")
@@ -92,8 +91,6 @@ def main():
 
     # Menu loop
     while True:
-    
-    
         print("\nMenu:")
         print("1. Show Animals")
         print("2. Add Animal")
@@ -119,8 +116,6 @@ def main():
             name = input("Enter the name of the animal to remove: ")
             zoo.remove_animal(name)
         elif choice == "4":
-    
-    
             zoo.feed_all()
         elif choice == "5":
             name = input("Enter the name of the animal to feed: ")
@@ -139,3 +134,17 @@ def main():
             name = input("Enter the name of the animal to check: ")
             found = False
             for animal in zoo.animals:
+                if animal.name == name:
+                    zookeeper.check_animal_health(animal)
+                    found = True
+                    break
+            if not found:
+                print(f"Animal {name} not found.")
+        elif choice == "8":
+            print("Exiting the Zoo Management System. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
