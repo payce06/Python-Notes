@@ -92,3 +92,30 @@ def main():
 
     # Menu loop
     while True:
+    
+    
+        print("\nMenu:")
+        print("1. Show Animals")
+        print("2. Add Animal")
+        print("3. Remove Animal")
+        print("4. Feed All Animals")
+        print("5. Feed Specific Animal")
+        print("6. Check Health of All Animals")
+        print("7. Check Health of Specific Animal")
+        print("8. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            zoo.show_animals()
+        elif choice == "2":
+            name = input("Enter animal name: ")
+            species = input("Enter animal species: ")
+            age = int(input("Enter animal age: "))
+            health = int(input("Enter animal health (0-100): "))
+            new_animal = Animal(name, species, age, health)
+            zoo.add_animal(new_animal)
+        elif choice == "3":
+            name = input("Enter the name of the animal to remove: ")
+            zoo.remove_animal(name)
+        elif choice == "4":
