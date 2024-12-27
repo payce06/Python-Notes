@@ -52,3 +52,22 @@ class Zoo:
         for animal in self.animals:
             food = random.choice(["grass", "meat", "fruits"])
             animal.feed(food)
+
+
+    def check_all_health(self):
+        print("\nHealth Status of All Animals:")
+        for animal in self.animals:
+            print(f"{animal.name} is {animal.check_health()}.")
+
+# Zookeeper class
+class Zookeeper:
+    def __init__(self, name):
+        self.name = name
+
+    def feed_animal(self, animal, food):
+        print(f"{self.name} is feeding {animal.name} with {food}.")
+        animal.feed(food)
+
+    def check_animal_health(self, animal):
+        health_status = animal.check_health()
+        print(f"{self.name} checked {animal.name}'s health: {health_status}.")
