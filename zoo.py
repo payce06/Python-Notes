@@ -71,3 +71,24 @@ class Zookeeper:
     def check_animal_health(self, animal):
         health_status = animal.check_health()
         print(f"{self.name} checked {animal.name}'s health: {health_status}.")
+    
+    # Main function
+def main():
+    print("Welcome to the Zoo Management System!")
+    zoo = Zoo("Sunnyvale Zoo")
+
+    # Creating animals
+    lion = Animal("Leo", "Lion", 5, 80)
+    elephant = Animal("Dumbo", "Elephant", 10, 60)
+    giraffe = Animal("Ginny", "Giraffe", 7, 50)
+
+    # Adding animals to the zoo
+    zoo.add_animal(lion)
+    zoo.add_animal(elephant)
+    zoo.add_animal(giraffe)
+
+    # Creating a zookeeper
+    zookeeper = Zookeeper("Jake")
+
+    # Menu loop
+    while True:
