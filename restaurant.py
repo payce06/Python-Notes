@@ -55,3 +55,23 @@ class Restaurant:
 
     def add_menu_item(self, menu_item):
         """Add a menu item to the restaurant's menu."""
+    
+        self.menu.append(menu_item)
+        print(f"Added {menu_item.name} to the menu.")
+
+    def remove_menu_item(self, menu_item):
+        """Remove a menu item from the restaurant's menu."""
+        if menu_item in self.menu:
+            self.menu.remove(menu_item)
+            print(f"Removed {menu_item.name} from the menu.")
+        else:
+            print(f"{menu_item.name} not found in the menu.")
+
+    def register_employee(self, employee):
+        """Register an employee in the restaurant."""
+        self.employees.append(employee)
+        print(f"Employee {employee.name} has been registered.")
+
+    def register_customer(self, customer):
+        """Register a customer in the restaurant."""
+        self.customers.append(customer)
