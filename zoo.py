@@ -119,3 +119,23 @@ def main():
             name = input("Enter the name of the animal to remove: ")
             zoo.remove_animal(name)
         elif choice == "4":
+    
+    
+            zoo.feed_all()
+        elif choice == "5":
+            name = input("Enter the name of the animal to feed: ")
+            food = input("Enter the food to give: ")
+            found = False
+            for animal in zoo.animals:
+                if animal.name == name:
+                    zookeeper.feed_animal(animal, food)
+                    found = True
+                    break
+            if not found:
+                print(f"Animal {name} not found.")
+        elif choice == "6":
+            zoo.check_all_health()
+        elif choice == "7":
+            name = input("Enter the name of the animal to check: ")
+            found = False
+            for animal in zoo.animals:
