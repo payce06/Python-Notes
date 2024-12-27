@@ -15,3 +15,22 @@ class Animal:
     def check_health(self):
         if self.health >= 70:
             status = "healthy"
+    elif 40 <= self.health < 70:
+            status = "moderate"
+        else:
+            status = "poor"
+        return status
+
+    def __str__(self):
+        health_status = self.check_health()
+        return f"{self.name} ({self.species}), Age: {self.age}, Health: {self.health} ({health_status})"
+
+# Zoo class
+class Zoo:
+    def __init__(self, name):
+        self.name = name
+        self.animals = []
+
+    def add_animal(self, animal):
+        self.animals.append(animal)
+        print(f"Added {animal.name} to the zoo.")
