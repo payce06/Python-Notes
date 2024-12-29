@@ -28,4 +28,13 @@ class Enemy:
 
     def take_damage(self, damage):
         self.health -= damage
-        if self.health < 0:
+        if self.health < 0:    
+            self.health = 0
+
+    def attack_player(self):
+        return random.randint(1, self.attack)
+
+def battle(player, enemy):
+    print(f"A wild {enemy.name} has appeared!")
+    while player.is_alive() and enemy.is_alive():
+        action = input("Do you want to (A)ttack or (F)lee? ").lower()
