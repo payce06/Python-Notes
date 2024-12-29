@@ -90,3 +90,46 @@ def inheritance_example():
     cat.speak()  # Output: Whiskers the black cat says Meow!
 inheritance_example()
 print()
+
+# 3. Method Overriding
+# Question: How do you override methods in a derived class in Python?
+def method_overriding():
+
+    # Base class (parent class)
+    class Vehicle:
+        def __init__(self, make, model):
+            self.make = make
+            self.model = model
+
+        def display_info(self):
+            print(f"Vehicle: {self.make} {self.model}")
+
+    # Derived class (child class)
+    class Car(Vehicle):
+        def __init__(self, make, model, doors):
+            super().__init__(make, model)  # Calling the parent class constructor
+            self.doors = doors
+
+        # Overriding the display_info method
+        def display_info(self):
+            print(f"Car: {self.make} {self.model} with {self.doors} doors")
+
+    # Derived class (another child class)
+    class Truck(Vehicle):
+        def __init__(self, make, model, payload_capacity):
+            super().__init__(make, model)  # Calling the parent class constructor
+            self.payload_capacity = payload_capacity
+
+        # Overriding the display_info method
+        def display_info(self):
+            print(f"Truck: {self.make} {self.model} with a payload capacity of {self.payload_capacity} kg")
+
+    # Creating instances of derived classes
+    car = Car("Toyota", "Camry", 4)
+    truck = Truck("Ford", "F-150", 3000)
+
+    # Accessing overridden methods
+    car.display_info()  # Output: Car: Toyota Camry with 4 doors
+    truck.display_info()  # Output: Truck: Ford F-150 with a payload capacity of 3000 kg
+method_overriding()
+print()
