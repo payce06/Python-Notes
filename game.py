@@ -48,3 +48,13 @@ def battle(player, enemy):
                 enemy_damage = enemy.attack_player()
                 player.take_damage(enemy_damage)
                 print(f"{enemy.name} attacks you and deals {enemy_damage} damage.")
+        
+        elif action == 'f':
+            print("You flee the battle!")
+            break
+        else:
+            print("Invalid action. Please choose again.")
+
+        print(f"\nYour Health: {player.health} | {enemy.name}'s Health: {enemy.health}")
+
+    if player.is_alive() and not enemy.is_alive():
