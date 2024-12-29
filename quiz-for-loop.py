@@ -20,3 +20,33 @@ def fizz_buzz():
             print(i)
 
 fizz_buzz()  # Prints Fizz, Buzz, or FizzBuzz for numbers 1 to 100
+
+
+# 3. Function to find the sum of all numbers in an array using a for loop
+def sum_array(arr):
+    total = 0
+    for num in arr:
+        total += num
+    return total
+
+print(sum_array([1, 2, 3, 4, 5]))  # Output: 15
+
+# 4. Function to print the first n Fibonacci numbers using a for loop
+def fibonacci(n):
+    fib_sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib_sequence.append(a)
+        a, b = b, a + b
+    return fib_sequence
+
+print(fibonacci(10))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+# 5. Function to calculate the factorial of a number using a for loop
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+print(factorial(5))  # Output: 120
