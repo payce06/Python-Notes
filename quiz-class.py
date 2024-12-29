@@ -133,3 +133,29 @@ def method_overriding():
     truck.display_info()  # Output: Truck: Ford F-150 with a payload capacity of 3000 kg
 method_overriding()
 print()
+
+# 4. Using the `super()` function
+# Question: How do you use the `super()` function in Python to call methods from a parent class in a derived class?
+def super_function_example():
+    class AnimalWithSuper:
+        def __init__(self, name):
+            self.name = name
+
+        def speak(self):
+            print(f"{self.name} makes a sound.")
+
+    class DogWithSuper(AnimalWithSuper):
+        def __init__(self, name, breed):
+            super().__init__(name)  # Using super() to call the parent class constructor
+            self.breed = breed
+
+        def speak(self):
+            super().speak()  # Calling the parent class speak method
+            print(f"{self.name} the {self.breed} says Woof!")
+
+    # Creating an instance of DogWithSuper
+    dog = DogWithSuper("Rex", "Golden Retriever")
+    dog.speak()  # Output: Rex makes a sound. Rex the Golden Retriever says Woof!
+super_function_example()
+print()
+
