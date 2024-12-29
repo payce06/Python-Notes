@@ -64,3 +64,22 @@ def iterating_over_dicts():
         print(f"{key}: {value}")
 iterating_over_dicts()
 print()
+
+# 4. Nested Dictionaries
+# Question: How do you access and iterate over elements in a nested dictionary in Python?
+def nested_dicts():
+    print("Nested Dictionaries:")
+    students = {
+        "student1": {"name": "John", "age": 20},
+        "student2": {"name": "Alice", "age": 22},
+    }
+
+    print("student1Name:", students["student1"]["name"])  # "John"
+
+    # Iterating Over Nested Dictionary
+    for student_id, details in students.items():
+        print(f"{student_id}:")
+        for key, value in details.items():
+            print(f"  {key}: {value}")
+nested_dicts()
+print()
