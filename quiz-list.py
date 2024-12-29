@@ -54,3 +54,26 @@ def common_list_methods():
     print("afterRemove(2):", numbers)
     last = numbers.pop()
     print("afterPop:", numbers, "| poppedElement:", last)
+
+    
+    # Sort and Reverse
+    numbers.sort()
+    print("afterSort:", numbers)  # [4, 6, 8, ...]
+    numbers.reverse()
+    print("afterReverse:", numbers)  # [..., 8, 6, 4]
+common_list_methods()
+print()
+
+# 4. Iterating Over Lists
+# Question: How do you iterate over a list in Python and access the index of each element?
+def iterating_over_lists():
+    print("Iterating Over Lists:")
+    fruits = ["Apple", "Banana", "Cherry"]
+    for fruit in fruits:
+        print(fruit)
+
+    # Using Enumerate
+    for index, fruit in enumerate(fruits):
+        print(f"index {index}: {fruit}")
+iterating_over_lists()
+print()
