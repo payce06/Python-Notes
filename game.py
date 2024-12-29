@@ -58,3 +58,13 @@ def battle(player, enemy):
         print(f"\nYour Health: {player.health} | {enemy.name}'s Health: {enemy.health}")
 
     if player.is_alive() and not enemy.is_alive():
+        
+        print(f"You defeated the {enemy.name}!")
+    elif not player.is_alive():
+        print(f"You have been defeated by {enemy.name}... Game Over!")
+
+def explore(player):
+    print("\nYou are exploring the dungeon...")
+    while player.is_alive():
+        print("\nYou come across a door.")
+        choice = input("Do you want to (E)nter the door or (L)eave the dungeon? ").lower()
