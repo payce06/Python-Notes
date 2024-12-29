@@ -71,3 +71,28 @@ def find_smallest(arr):
     return smallest
 
 print(find_smallest([3, 1, 4, 1, 5, 9]))  # Output: 1
+
+
+# 8. Function that multiplies all the numbers in an array using a for loop
+def multiply_array(arr):
+    product = 1
+    for num in arr:
+        product *= num
+    return product
+
+print(multiply_array([1, 2, 3, 4]))  # Output: 24
+
+# 9. Function that prints all prime numbers up to n using a for loop
+def print_primes(n):
+    primes = []
+    for num in range(2, n + 1):
+        is_prime = True
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(num)
+    return primes
+
+print(print_primes(20))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]
