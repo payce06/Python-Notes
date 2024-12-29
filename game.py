@@ -68,3 +68,13 @@ def explore(player):
     while player.is_alive():
         print("\nYou come across a door.")
         choice = input("Do you want to (E)nter the door or (L)eave the dungeon? ").lower()
+     
+        if choice == 'e':
+            enemy_name = random.choice(["Goblin", "Orc", "Dragon"])
+            enemy_health = random.randint(30, 100)
+            enemy_attack = random.randint(5, 20)
+            enemy = Enemy(enemy_name, enemy_health, enemy_attack)
+            battle(player, enemy)
+           
+            if not player.is_alive():
+                break
