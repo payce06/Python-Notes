@@ -56,3 +56,25 @@ def range_with_step():
         print(i)
 range_with_step()
 print()
+
+# 6. Nested for loops
+# Question: How can you use nested for loops in Python to iterate over multiple ranges?
+def nested_loops():
+    print("Nested for loops:")
+    for i in range(1, 4):
+        for j in range(1, 4):
+            print(f"({i}, {j})")
+nested_loops()
+print()
+
+# 7. Using break and continue
+# Question: How do you use break to exit a loop early in Python?
+def break_example():
+    print("Using break:")
+    for i in range(1, 6):
+        if i == 3:
+            print("Breaking at 3")
+            break
+        print(i)
+break_example()
+print()
