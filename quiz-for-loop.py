@@ -146,3 +146,35 @@ def average_array(arr):
     return total / len(arr) if len(arr) > 0 else 0
 
 print(average_array([1, 2, 3, 4, 5]))  # Output: 3.0
+
+# 15. Function to create a new array that contains every second element of an existing array using a for loop
+def every_second_element(arr):
+    result = []
+    for i in range(1, len(arr), 2):
+        result.append(arr[i])
+    return result
+
+print(every_second_element([1, 2, 3, 4, 5, 6]))  # Output: [2, 4, 6]
+
+# 16. Function to find the second largest number in an array using a for loop
+def second_largest(arr):
+    largest = second = float('-inf')
+    for num in arr:
+        if num > largest:
+            second, largest = largest, num
+        elif num > second and num < largest:
+            second = num
+    return second
+
+print(second_largest([10, 20, 4, 45, 99]))  # Output: 45
+
+# 17. Function that merges two arrays into one using a for loop
+def merge_arrays(arr1, arr2):
+    result = []
+    for item in arr1:
+        result.append(item)
+    for item in arr2:
+        result.append(item)
+    return result
+
+print(merge_arrays([1, 2, 3], [4, 5, 6]))  # Output: [1, 2, 3, 4, 5, 6]
