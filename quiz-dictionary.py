@@ -44,3 +44,23 @@ def common_dict_methods():
     print("afterPopitem:", person, "| poppedItem:", lastItem)
 common_dict_methods()
 print()
+
+# 3. Iterating Over Dictionaries
+# Question: How do you iterate over a dictionary to access its keys, values, and key-value pairs in Python?
+def iterating_over_dicts():
+    print("Iterating Over Dictionaries:")
+    fruits = {"apple": 3, "banana": 5, "cherry": 2}
+
+    # Keys
+    for key in fruits:
+        print(f"key: {key}")
+
+    # Values
+    for value in fruits.values():
+        print(f"value: {value}")
+
+    # Key-Value Pairs
+    for key, value in fruits.items():
+        print(f"{key}: {value}")
+iterating_over_dicts()
+print()
