@@ -32,3 +32,25 @@ def slicing_and_indexing():
     print("reversedList:", nums[::-1])  # [5, 4, 3, 2, 1, 0]
 slicing_and_indexing()
 print()
+
+# 3. Common List Methods
+# Question: What are some common list methods in Python for modifying a list (like append, extend, insert, remove, pop, etc.)?
+def common_list_methods():
+    print("Common List Methods:")
+    numbers = [4, 2, 8, 6, 2]
+
+    # Append and Extend
+    numbers.append(10)
+    print("afterAppend:", numbers)  # [4, 2, 8, 6, 2, 10]
+    numbers.extend([20, 30])
+    print("afterExtend:", numbers)  # [4, 2, 8, 6, 2, 10, 20, 30]
+
+    # Insert
+    numbers.insert(1, 99)
+    print("afterInsert:", numbers)  # [4, 99, 2, ...]
+
+    # Remove and Pop
+    numbers.remove(2)
+    print("afterRemove(2):", numbers)
+    last = numbers.pop()
+    print("afterPop:", numbers, "| poppedElement:", last)
