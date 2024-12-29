@@ -20,3 +20,16 @@ print()
 # Question: How can you iterate over a string in Python and print each character?
 def iterate_string():
     word = "Python"
+    for char in word:
+        print(char)
+iterate_string()
+print()
+
+# 4. Iterating over a dictionary
+# Question: How do you iterate over a dictionary in Python and print key-value pairs?
+def iterate_dict():
+    person = {"name": "Alice", "age": 30, "city": "New York"}
+    for key, value in person.items():
+        print(f"{key}: {value}")
+iterate_dict()
+print()
