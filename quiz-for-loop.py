@@ -178,3 +178,33 @@ def merge_arrays(arr1, arr2):
     return result
 
 print(merge_arrays([1, 2, 3], [4, 5, 6]))  # Output: [1, 2, 3, 4, 5, 6]
+
+
+# 18. Function to calculate the power of a number using a for loop
+def power(base, exponent):
+    result = 1
+    for _ in range(exponent):
+        result *= base
+    return result
+
+print(power(2, 3))  # Output: 8
+
+# 19. Function that counts how many even numbers are in an array using a for loop
+def count_evens(arr):
+    count = 0
+    for num in arr:
+        if num % 2 == 0:
+            count += 1
+    return count
+
+print(count_evens([1, 2, 3, 4, 5, 6]))  # Output: 3
+
+# 20. Function that finds the common elements between two arrays using a for loop
+def common_elements(arr1, arr2):
+    result = []
+    for item in arr1:
+        if item in arr2 and item not in result:
+            result.append(item)
+    return result
+
+print(common_elements([1, 2, 3, 4], [3, 4, 5, 6]))  # Output: [3, 4]
