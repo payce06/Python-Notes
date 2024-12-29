@@ -125,3 +125,24 @@ def is_sorted(arr):
 
 print(is_sorted([1, 2, 3, 4, 5]))  # Output: True
 print(is_sorted([1, 3, 2, 4, 5]))  # Output: False
+
+
+# 13. Function to find the length of the longest word in a string using a for loop
+def longest_word_length(s):
+    words = s.split()
+    max_length = 0
+    for word in words:
+        if len(word) > max_length:
+            max_length = len(word)
+    return max_length
+
+print(longest_word_length("The quick brown fox jumps over the lazy dog"))  # Output: 5
+
+# 14. Function that finds the average of an array of numbers using a for loop
+def average_array(arr):
+    total = 0
+    for num in arr:
+        total += num
+    return total / len(arr) if len(arr) > 0 else 0
+
+print(average_array([1, 2, 3, 4, 5]))  # Output: 3.0
