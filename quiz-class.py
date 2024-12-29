@@ -71,3 +71,22 @@ def inheritance_example():
         # Overriding the speak method
         def speak(self):
             print(f"{self.name} the {self.breed} says Woof!")
+    # Derived class (another child class)
+    class Cat(Animal):
+        def __init__(self, name, color):
+            super().__init__(name)  # Calling the parent class constructor
+            self.color = color
+
+        # Overriding the speak method
+        def speak(self):
+            print(f"{self.name} the {self.color} cat says Meow!")
+
+    # Creating instances of derived classes
+    dog = DogInherited("Rex", "German Shepherd")
+    cat = Cat("Whiskers", "black")
+
+    # Accessing methods from derived classes
+    dog.speak()  # Output: Rex the German Shepherd says Woof!
+    cat.speak()  # Output: Whiskers the black cat says Meow!
+inheritance_example()
+print()
