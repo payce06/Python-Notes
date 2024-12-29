@@ -113,3 +113,23 @@ def method_overriding():
         # Overriding the display_info method
         def display_info(self):
             print(f"Car: {self.make} {self.model} with {self.doors} doors")
+    
+        # Derived class (another child class)
+    class Truck(Vehicle):
+        def __init__(self, make, model, payload_capacity):
+            super().__init__(make, model)  # Calling the parent class constructor
+            self.payload_capacity = payload_capacity
+
+        # Overriding the display_info method
+        def display_info(self):
+            print(f"Truck: {self.make} {self.model} with a payload capacity of {self.payload_capacity} kg")
+
+    # Creating instances of derived classes
+    car = Car("Toyota", "Camry", 4)
+    truck = Truck("Ford", "F-150", 3000)
+
+    # Accessing overridden methods
+    car.display_info()  # Output: Car: Toyota Camry with 4 doors
+    truck.display_info()  # Output: Truck: Ford F-150 with a payload capacity of 3000 kg
+method_overriding()
+print()
