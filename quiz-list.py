@@ -15,3 +15,20 @@ def basic_list_operations():
     # Remove Elements
     myList.remove(3)
     print("afterRemove(3):", myList)  # [1, 2, "Apple", "Banana", "Cherry"]
+
+    # Length of List
+    print("lengthOfList:", len(myList))  # 5
+basic_list_operations()
+print()
+
+# 2. Slicing And Indexing
+# Question: How can you slice and index a list in Python?
+def slicing_and_indexing():
+    print("Slicing And Indexing:")
+    nums = [0, 1, 2, 3, 4, 5]
+    print("originalList:", nums)
+    print("firstThreeElements:", nums[:3])  # [0, 1, 2]
+    print("lastTwoElements:", nums[-2:])  # [4, 5]
+    print("reversedList:", nums[::-1])  # [5, 4, 3, 2, 1, 0]
+slicing_and_indexing()
+print()
