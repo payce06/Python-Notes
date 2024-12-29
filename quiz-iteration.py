@@ -78,3 +78,14 @@ def break_example():
         print(i)
 break_example()
 print()
+
+# Question: How do you use continue to skip an iteration in Python?
+def continue_example():
+    print("\nUsing continue:")
+    for i in range(1, 6):
+        if i == 3:
+            print("Skipping 3")
+            continue
+        print(i)
+continue_example()
+print()
