@@ -55,7 +55,6 @@ def common_list_methods():
     last = numbers.pop()
     print("afterPop:", numbers, "| poppedElement:", last)
 
-    
     # Sort and Reverse
     numbers.sort()
     print("afterSort:", numbers)  # [4, 6, 8, ...]
@@ -76,4 +75,18 @@ def iterating_over_lists():
     for index, fruit in enumerate(fruits):
         print(f"index {index}: {fruit}")
 iterating_over_lists()
+print()
+
+# 5. Nested Lists (2D Matrix)
+# Question: How can you iterate over a nested list (2D matrix) in Python and access individual elements?
+def nested_lists():
+    print("Nested Lists:")
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print("elementAt(1,1):", matrix[1][1])  # 5
+
+    for row in matrix:
+        for element in row:
+            print(element, end=" ")
+        print()
+nested_lists()
 print()
