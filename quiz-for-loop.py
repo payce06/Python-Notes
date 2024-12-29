@@ -50,3 +50,24 @@ def factorial(n):
     return result
 
 print(factorial(5))  # Output: 120
+
+
+# 6. Function that counts the number of occurrences of a specific character in a string using a for loop
+def count_character(s, char):
+    count = 0
+    for c in s:
+        if c == char:
+            count += 1
+    return count
+
+print(count_character("hello world", "o"))  # Output: 2
+
+# 7. Function to find the smallest number in an array using a for loop
+def find_smallest(arr):
+    smallest = arr[0]
+    for num in arr:
+        if num < smallest:
+            smallest = num
+    return smallest
+
+print(find_smallest([3, 1, 4, 1, 5, 9]))  # Output: 1
