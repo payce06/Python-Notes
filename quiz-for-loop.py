@@ -96,3 +96,32 @@ def print_primes(n):
     return primes
 
 print(print_primes(20))  # Output: [2, 3, 5, 7, 11, 13, 17, 19]
+
+
+# 10. Function to reverse the elements of an array using a for loop
+def reverse_array(arr):
+    reversed_arr = []
+    for i in range(len(arr) - 1, -1, -1):
+        reversed_arr.append(arr[i])
+    return reversed_arr
+
+print(reverse_array([1, 2, 3, 4, 5]))  # Output: [5, 4, 3, 2, 1]
+
+# 11. Function that concatenates all strings in an array using a for loop
+def concatenate_strings(arr):
+    result = ""
+    for string in arr:
+        result += string
+    return result
+
+print(concatenate_strings(["Hello", " ", "world", "!"]))  # Output: "Hello world!"
+
+# 12. Function to check if an array is sorted in ascending order using a for loop
+def is_sorted(arr):
+    for i in range(len(arr) - 1):
+        if arr[i] > arr[i + 1]:
+            return False
+    return True
+
+print(is_sorted([1, 2, 3, 4, 5]))  # Output: True
+print(is_sorted([1, 3, 2, 4, 5]))  # Output: False
