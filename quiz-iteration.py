@@ -33,3 +33,26 @@ def iterate_dict():
         print(f"{key}: {value}")
 iterate_dict()
 print()
+
+# 5. Using range()
+# Question: How can you use the range function in a for loop in Python?
+def range_example():
+    print("Using range:")
+    for i in range(5):  # 0 to 4
+        print(i)
+range_example()
+print()
+
+def range_with_start_end():
+    print("Range with start and stop:")
+    for i in range(1, 6):  # 1 to 5
+        print(i)
+range_with_start_end()
+print()
+
+def range_with_step():
+    print("Range with step:")
+    for i in range(0, 10, 2):  # Even numbers from 0 to 8
+        print(i)
+range_with_step()
+print()
