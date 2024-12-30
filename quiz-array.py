@@ -123,3 +123,27 @@ def remove_falsy(arr):
     return result
 
 print(remove_falsy([0, 1, False, 2, "", 3, None]))  # Output: [1, 2, 3]
+
+
+# 14. Function that finds the intersection of two arrays
+def intersection(arr1, arr2):
+    result = []
+    for item in arr1:
+        if item in arr2 and item not in result:
+            result.append(item)
+    return result
+
+print(intersection([1, 2, 3], [2, 3, 4]))  # Output: [2, 3]
+
+# 15. Function to find the difference between two arrays
+def difference(arr1, arr2):
+    result = []
+    for item in arr1:
+        if item not in arr2:
+            result.append(item)
+    for item in arr2:
+        if item not in arr1:
+            result.append(item)
+    return result
+
+print(difference([1, 2, 3], [2, 3, 4]))  # Output: [1, 4]
