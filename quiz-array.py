@@ -55,3 +55,23 @@ def find_median(arr):
         return sorted_arr[mid]
 
 print(find_median([1, 3, 3, 6, 7, 8, 9]))  # Output: 6
+
+
+# 7. Function that checks if an array contains a specific value
+def contains_value(arr, value):
+    for item in arr:
+        if item == value:
+            return True
+    return False
+
+print(contains_value([1, 2, 3, 4], 3))  # Output: True
+
+# 8. Function to flatten a nested array (array of arrays)
+def flatten_array(nested_arr):
+    flat = []
+    for sublist in nested_arr:
+        for item in sublist:
+            flat.append(item)
+    return flat
+
+print(flatten_array([[1, 2], [3, 4], [5]]))  # Output: [1, 2, 3, 4, 5]
