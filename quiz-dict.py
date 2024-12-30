@@ -149,3 +149,28 @@ def is_object_empty(obj):
 
 print(is_object_empty({}))  # Output: True
 
+
+# 17. Function that takes two objects and returns the common keys and their values
+def common_keys_values(obj1, obj2):
+    common = {}
+    for key in obj1:
+        if key in obj2 and obj1[key] == obj2[key]:
+            common[key] = obj1[key]
+    return common
+
+print(common_keys_values({"a": 1, "b": 2}, {"b": 2, "c": 3}))  # Output: {'b': 2}
+
+# 18. Function that finds the keys with the highest value in an object
+def keys_with_highest_value(obj):
+    max_value = None
+    for key in obj:
+        if max_value is None or obj[key] > max_value:
+            max_value = obj[key]
+    highest_keys = []
+    for key in obj:
+        if obj[key] == max_value:
+            highest_keys.append(key)
+    return highest_keys
+
+print(keys_with_highest_value({"a": 1, "b": 3, "c": 3}))  # Output: ['b', 'c']
+
