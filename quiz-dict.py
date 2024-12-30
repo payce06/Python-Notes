@@ -73,4 +73,32 @@ def invert_object(obj):
         inverted[value] = key
     return inverted
 
-print(invert_object({"a": 1, "b": 2}))  # Output: {1: 'a', 2: 'b
+print(invert_object({"a": 1, "b": 2}))  # Output: {1: 'a', 2: 'b'}
+
+
+# 9. Function that adds a property to an object
+def add_property(obj, key, value):
+    obj[key] = value
+    return obj
+
+print(add_property({"a": 1}, "b", 2))  # Output: {'a': 1, 'b': 2}
+
+# 10. Function that deletes a property from an object
+def delete_property(obj, key):
+    if key in obj:
+        del obj[key]
+    return obj
+
+print(delete_property({"a": 1, "b": 2}, "b"))  # Output: {'a': 1}
+
+# 11. Function to check if two objects are equal
+def are_objects_equal(obj1, obj2):
+    if len(obj1) != len(obj2):
+        return False
+    for key in obj1:
+        if key not in obj2 or obj1[key] != obj2[key]:
+            return False
+    return True
+
+print(are_objects_equal({"a": 1, "b": 2}, {"a": 1, "b": 2}))  # Output: True
+
