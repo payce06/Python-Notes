@@ -147,3 +147,30 @@ def difference(arr1, arr2):
     return result
 
 print(difference([1, 2, 3], [2, 3, 4]))  # Output: [1, 4]
+
+# 16. Function to concatenate two arrays
+def concatenate_arrays(arr1, arr2):
+    result = []
+    for item in arr1:
+        result.append(item)
+    for item in arr2:
+        result.append(item)
+    return result
+
+print(concatenate_arrays([1, 2], [3, 4]))  # Output: [1, 2, 3, 4]
+
+# 17. Function that returns the first n elements of an array
+def first_n_elements(arr, n):
+    return arr[:n]
+
+print(first_n_elements([1, 2, 3, 4, 5], 3))  # Output: [1, 2, 3]
+
+# 18. Function to find the common elements in three arrays
+def common_in_three(arr1, arr2, arr3):
+    result = []
+    for item in arr1:
+        if item in arr2 and item in arr3 and item not in result:
+            result.append(item)
+    return result
+
+print(common_in_three([1, 2, 3], [2, 3, 4], [3, 4, 5]))  # Output: [3]
