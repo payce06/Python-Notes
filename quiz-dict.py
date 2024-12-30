@@ -174,3 +174,24 @@ def keys_with_highest_value(obj):
 
 print(keys_with_highest_value({"a": 1, "b": 3, "c": 3}))  # Output: ['b', 'c']
 
+
+# 19. Function to convert an object to a query string
+def object_to_query_string(obj):
+    query_string = ""
+    for key, value in obj.items():
+        query_string += f"{key}={value}&"
+    return query_string.rstrip("&")
+
+print(object_to_query_string({"a": 1, "b": 2}))  # Output: 'a=1&b=2'
+
+# 20. Function that returns the nested value of an object given a key path
+def get_nested_value(obj, key_path):
+    keys = key_path.split(".")
+    for key in keys:
+        if isinstance(obj, dict) and key in obj:
+            obj = obj[key]
+        else:
+            return None
+    return obj
+
+print(get_nested_value({"a": {"b": {"c": 1}}}, "a.b.c"))  # Output: 1
