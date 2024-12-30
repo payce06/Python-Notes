@@ -75,3 +75,30 @@ def flatten_array(nested_arr):
     return flat
 
 print(flatten_array([[1, 2], [3, 4], [5]]))  # Output: [1, 2, 3, 4, 5]
+
+
+# 9. Function that shuffles the elements of an array
+import random
+def shuffle_array(arr):
+    shuffled = arr[:]
+    random.shuffle(shuffled)
+    return shuffled
+
+print(shuffle_array([1, 2, 3, 4]))  # Output: Random order of [1, 2, 3, 4]
+
+# 10. Function to rotate the elements of an array to the right by k steps
+def rotate_array(arr, k):
+    n = len(arr)
+    k %= n
+    return arr[-k:] + arr[:-k]
+
+print(rotate_array([1, 2, 3, 4, 5], 2))  # Output: [4, 5, 1, 2, 3]
+
+# 11. Function to split an array into chunks of a specific size
+def chunk_array(arr, size):
+    chunks = []
+    for i in range(0, len(arr), size):
+        chunks.append(arr[i:i + size])
+    return chunks
+
+print(chunk_array([1, 2, 3, 4, 5], 2))  # Output: [[1, 2], [3, 4], [5]]
