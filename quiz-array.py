@@ -102,3 +102,24 @@ def chunk_array(arr, size):
     return chunks
 
 print(chunk_array([1, 2, 3, 4, 5], 2))  # Output: [[1, 2], [3, 4], [5]]
+
+
+# 12. Function that takes an array and a number and returns a new array with elements greater than the given number
+def filter_greater(arr, num):
+    result = []
+    for item in arr:
+        if item > num:
+            result.append(item)
+    return result
+
+print(filter_greater([1, 2, 3, 4, 5], 3))  # Output: [4, 5]
+
+# 13. Function to remove falsy values from an array
+def remove_falsy(arr):
+    result = []
+    for item in arr:
+        if item:
+            result.append(item)
+    return result
+
+print(remove_falsy([0, 1, False, 2, "", 3, None]))  # Output: [1, 2, 3]
