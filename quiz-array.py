@@ -26,3 +26,32 @@ def square_elements(arr):
     return squared
 
 print(square_elements([1, 2, 3, 4]))  # Output: [1, 4, 9, 16]
+
+
+# 4. Function to sort an array of strings in alphabetical order
+def sort_strings(arr):
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
+    return arr
+
+print(sort_strings(["banana", "apple", "cherry"]))  # Output: ['apple', 'banana', 'cherry']
+
+# 5. Function that returns the last element of an array
+def last_element(arr):
+    return arr[-1] if arr else None
+
+print(last_element([1, 2, 3, 4]))  # Output: 4
+
+# 6. Function to find the median of an array of numbers
+def find_median(arr):
+    sorted_arr = sorted(arr)
+    n = len(sorted_arr)
+    mid = n // 2
+    if n % 2 == 0:
+        return (sorted_arr[mid - 1] + sorted_arr[mid]) / 2
+    else:
+        return sorted_arr[mid]
+
+print(find_median([1, 3, 3, 6, 7, 8, 9]))  # Output: 6
