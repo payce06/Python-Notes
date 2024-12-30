@@ -46,3 +46,31 @@ def deep_clone(obj):
 original = {"a": 1, "b": {"c": 2}}
 clone = deep_clone(original)
 print(clone)  # Output: {'a': 1, 'b': {'c': 2}}
+
+
+# 6. Function to get the keys of an object
+def get_keys(obj):
+    keys = []
+    for key in obj:
+        keys.append(key)
+    return keys
+
+print(get_keys({"a": 1, "b": 2}))  # Output: ['a', 'b']
+
+# 7. Function to get the values of an object
+def get_values(obj):
+    values = []
+    for key in obj:
+        values.append(obj[key])
+    return values
+
+print(get_values({"a": 1, "b": 2}))  # Output: [1, 2]
+
+# 8. Function to invert the keys and values of an object
+def invert_object(obj):
+    inverted = {}
+    for key, value in obj.items():
+        inverted[value] = key
+    return inverted
+
+print(invert_object({"a": 1, "b": 2}))  # Output: {1: 'a', 2: 'b
