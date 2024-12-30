@@ -174,3 +174,31 @@ def common_in_three(arr1, arr2, arr3):
     return result
 
 print(common_in_three([1, 2, 3], [2, 3, 4], [3, 4, 5]))  # Output: [3]
+
+
+# 19. Function that returns the unique elements in an array
+def unique_elements(arr):
+    unique = []
+    for item in arr:
+        if item not in unique:
+            unique.append(item)
+    return unique
+
+print(unique_elements([1, 2, 2, 3, 4, 4, 5]))  # Output: [1, 2, 3, 4, 5]
+
+# 20. Function that merges two sorted arrays into one sorted array
+def merge_sorted_arrays(arr1, arr2):
+    i = j = 0
+    result = []
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] < arr2[j]:
+            result.append(arr1[i])
+            i += 1
+        else:
+            result.append(arr2[j])
+            j += 1
+    result.extend(arr1[i:])
+    result.extend(arr2[j:])
+    return result
+
+print(merge_sorted_arrays([1, 3, 5], [2, 4, 6]))  # Output: [1, 2, 3, 4, 5, 6]
