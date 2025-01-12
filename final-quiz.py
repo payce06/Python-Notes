@@ -186,3 +186,43 @@ def reverse_string(s):
     return reversed_str
 
 print(reverse_string("hello"))  # "olleh"
+
+# Question 15: Find the second largest number in a list
+def second_largest(numbers):
+    """
+    Write a Python function to find the second largest number in a list.
+    """
+    largest = second = float('-inf')
+    for num in numbers:
+        if num > largest:
+            second = largest
+            largest = num
+        elif num > second and num != largest:
+            second = num
+    return second
+
+print(second_largest([1, 2, 3, 4, 5]))  # 4
+
+# Question 16: Celsius to Fahrenheit conversion
+def celsius_to_fahrenheit(celsius):
+    """
+    Write a Python program that converts a given temperature in Celsius to Fahrenheit.
+    """
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+print(celsius_to_fahrenheit(0))  # 32
+print(celsius_to_fahrenheit(100))  # 212
+
+# Question 17: Count characters excluding spaces
+def count_chars_excluding_spaces(s):
+    """
+    Write a Python program that counts the number of characters in a string, excluding spaces.
+    """
+    count = 0
+    for char in s:
+        if char != ' ':
+            count += 1
+    return count
+
+print(count_chars_excluding_spaces("Hello World"))  # 10
