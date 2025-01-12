@@ -118,3 +118,42 @@ def fibonacci(n):
     return fib
 
 print(fibonacci(10))  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+
+# Question 10: Find the average of numbers in a list
+def average(numbers):
+    """
+    Write a Python function that takes a list of numbers and returns the average of the numbers.
+    """
+    total = 0
+    for num in numbers:
+        total += num
+    return total / len(numbers) if numbers else 0
+
+print(average([1, 2, 3, 4, 5]))  # 3.0
+
+# Question 11: Remove duplicates from a list
+def remove_duplicates(numbers):
+    """
+    Write a Python program that removes duplicates from a list.
+    """
+    unique_numbers = []
+    for num in numbers:
+        if num not in unique_numbers:
+            unique_numbers.append(num)
+    return unique_numbers
+
+print(remove_duplicates([1, 2, 2, 3, 4, 4]))  # [1, 2, 3, 4]
+
+# Question 12: Find intersection of two lists
+def list_intersection(list1, list2):
+    """
+    Write a Python function to find the intersection of two lists.
+    """
+    intersection = []
+    for item in list1:
+        if item in list2 and item not in intersection:
+            intersection.append(item)
+    return intersection
+
+print(list_intersection([1, 2, 3], [3, 4, 5]))  # [3]
