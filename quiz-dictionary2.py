@@ -54,3 +54,37 @@ def get_keys(obj):
     return keys
 
 print(get_keys({"a": 1, "b": 2}))  # Output: ['a', 'b']
+
+
+# 7. Function to get the values of an object
+def get_values(obj):
+    values = []
+    for key in obj:
+        values.append(obj[key])
+    return values
+
+print(get_values({"a": 1, "b": 2}))  # Output: [1, 2]
+
+# 8. Function to invert the keys and values of an object
+def invert_object(obj):
+    inverted = {}
+    for key, value in obj.items():
+        inverted[value] = key
+    return inverted
+
+print(invert_object({"a": 1, "b": 2}))  # Output: {1: 'a', 2: 'b'}
+
+# 9. Function that adds a property to an object
+def add_property(obj, key, value):
+    obj[key] = value
+    return obj
+
+print(add_property({"a": 1}, "b", 2))  # Output: {'a': 1, 'b': 2}
+
+# 10. Function that deletes a property from an object
+def delete_property(obj, key):
+    if key in obj:
+        del obj[key]
+    return obj
+
+print(delete_property({"a": 1, "b": 2}, "b"))  # Output: {'a': 1}
