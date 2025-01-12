@@ -49,3 +49,44 @@ def count_vowels(s):
     return count
 
 print(count_vowels("Hello World"))  # 3
+
+
+# Question 5: Reverse a list without using slicing
+def reverse_list(lst):
+    """
+    Write a Python function to reverse a list without using slicing (ie a[::-1].
+    """
+    reversed_lst = []
+    for item in lst:
+        # Insert the current element at 0 index
+        reversed_lst.insert(0, item)
+    return reversed_lst
+
+print(reverse_list([1, 2, 3, 4, 5]))  # [5, 4, 3, 2, 1]
+
+# Question 6: Find the largest number in a list
+def find_largest(numbers):
+    """
+    Write a Python function that finds the largest number in a given list.
+    """
+    largest = numbers[0]
+    for num in numbers:
+        if num > largest:
+            largest = num
+    return largest
+
+print(find_largest([1, 2, 3, 4, 5]))  # 5
+
+# Question 7: Merge two dictionaries
+def merge_dicts(dict1, dict2):
+    """
+    Write a Python program that merges two dictionaries into one.
+    """
+    merged = {}
+    for key, value in dict1.items():
+        merged[key] = value
+    for key, value in dict2.items():
+        merged[key] = value
+    return merged
+
+print(merge_dicts({"a": 1, "b": 2}, {"c": 3, "d": 4}))  # {'a': 1, 'b': 2, 'c': 3, 'd': 4}
