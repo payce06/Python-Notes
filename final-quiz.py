@@ -50,7 +50,6 @@ def count_vowels(s):
 
 print(count_vowels("Hello World"))  # 3
 
-
 # Question 5: Reverse a list without using slicing
 def reverse_list(lst):
     """
@@ -119,7 +118,6 @@ def fibonacci(n):
 
 print(fibonacci(10))  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
-
 # Question 10: Find the average of numbers in a list
 def average(numbers):
     """
@@ -157,7 +155,6 @@ def list_intersection(list1, list2):
     return intersection
 
 print(list_intersection([1, 2, 3], [3, 4, 5]))  # [3]
-
 
 # Question 13: Check if a word is an anagram
 def is_anagram(word1, word2):
@@ -252,3 +249,20 @@ def is_perfect_number(n):
         if n % i == 0:
             total += i
     return total == n
+
+print(is_perfect_number(6))  # True
+print(is_perfect_number(28))  # True
+print(is_perfect_number(12))  # False
+
+# Question 20: Sort a list without using sort() method
+def sort_list(numbers):
+    """
+    Write a Python function to sort a list of numbers in ascending order without using the built-in sort() method.
+    """
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] > numbers[j]:
+                numbers[i], numbers[j] = numbers[j], numbers[i]
+    return numbers
+
+print(sort_list([5, 2, 9, 1, 5, 6]))  # [1, 2, 5, 5, 6, 9]
