@@ -88,3 +88,34 @@ def delete_property(obj, key):
     return obj
 
 print(delete_property({"a": 1, "b": 2}, "b"))  # Output: {'a': 1}
+
+
+# 11. Function to check if two objects are equal
+def are_objects_equal(obj1, obj2):
+    if len(obj1) != len(obj2):
+        return False
+    for key in obj1:
+        if key not in obj2 or obj1[key] != obj2[key]:
+            return False
+    return True
+
+print(are_objects_equal({"a": 1, "b": 2}, {"a": 1, "b": 2}))  # Output: True
+
+# 12. Function that returns an array of key-value pairs from an object
+def object_to_pairs(obj):
+    pairs = []
+    for key, value in obj.items():
+        pairs.append((key, value))
+    return pairs
+
+print(object_to_pairs({"a": 1, "b": 2}))  # Output: [('a', 1), ('b', 2)]
+
+# 13. Function to sort an array of objects by a specific property
+def sort_objects(arr, prop):
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i].get(prop, 0) > arr[j].get(prop, 0):
+                arr[i], arr[j] = arr[j], arr[i]
+    return arr
+
+print(sort_objects([{"a": 3}, {"a": 1}, {"a": 2}], "a"))  # Output: [{'a': 1}, {'a': 2}, {'a': 3}]
