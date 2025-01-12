@@ -90,3 +90,31 @@ def merge_dicts(dict1, dict2):
     return merged
 
 print(merge_dicts({"a": 1, "b": 2}, {"c": 3, "d": 4}))  # {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+# Question 8: Check if a number is prime
+def is_prime(n):
+    """
+    Write a Python function to check if a number is prime.
+    """
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(7))  # True
+print(is_prime(10))  # False
+
+# Question 9: Fibonacci sequence
+def fibonacci(n):
+    """
+    Write a Python program that prints the Fibonacci sequence up to a given number.
+    """
+    fib = [0, 1]
+    for i in range(2, n):
+        next_fib = fib[-1] + fib[-2]
+        fib.append(next_fib)
+    return fib
+
+print(fibonacci(10))  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
