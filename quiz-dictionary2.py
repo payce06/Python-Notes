@@ -119,3 +119,31 @@ def sort_objects(arr, prop):
     return arr
 
 print(sort_objects([{"a": 3}, {"a": 1}, {"a": 2}], "a"))  # Output: [{'a': 1}, {'a': 2}, {'a': 3}]
+
+
+# 14. Function to create an object from two arrays, one of keys and one of values
+def create_object(keys, values):
+    obj = {}
+    for i in range(len(keys)):
+        obj[keys[i]] = values[i]
+    return obj
+
+print(create_object(["a", "b"], [1, 2]))  # Output: {'a': 1, 'b': 2}
+
+# 15. Function to get the entries of an object
+def get_entries(obj):
+    entries = []
+    for key, value in obj.items():
+        entries.append((key, value))
+    return entries
+
+print(get_entries({"a": 1, "b": 2}))  # Output: [('a', 1), ('b', 2)]
+
+# 16. Function to check if an object is empty
+def is_object_empty(obj):
+    for key in obj:
+        return False
+    return True
+
+print(is_object_empty({}))  # Output: True
+
