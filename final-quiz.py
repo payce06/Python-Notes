@@ -157,3 +157,32 @@ def list_intersection(list1, list2):
     return intersection
 
 print(list_intersection([1, 2, 3], [3, 4, 5]))  # [3]
+
+
+# Question 13: Check if a word is an anagram
+def is_anagram(word1, word2):
+    """
+    Write a Python program that checks if a word is an anagram of another word.
+    Eg: abc and acb are anagrams as one can be formed by arranging the letters in another.
+    """
+    if len(word1) != len(word2):
+        return False
+    for char in word1:
+        if word1.count(char) != word2.count(char):
+            return False
+    return True
+
+print(is_anagram("listen", "silent"))  # True
+print(is_anagram("hello", "world"))  # False
+
+# Question 14: Reverse a string without slicing
+def reverse_string(s):
+    """
+    Write a Python program to reverse a string without using slicing.
+    """
+    reversed_str = ""
+    for char in s:
+        reversed_str = char + reversed_str
+    return reversed_str
+
+print(reverse_string("hello"))  # "olleh"
