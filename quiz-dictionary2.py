@@ -27,3 +27,30 @@ def get_property_values(arr, prop):
     return values
 
 print(get_property_values([{"a": 1}, {"a": 2}, {"b": 3}], "a"))  # Output: [1, 2]
+
+# 4. Function to check if an object contains a specific property
+def contains_property(obj, prop):
+    for key in obj:
+        if key == prop:
+            return True
+    return False
+
+print(contains_property({"a": 1, "b": 2}, "b"))  # Output: True
+
+# 5. Function to deep clone an object
+import copy
+def deep_clone(obj):
+    return copy.deepcopy(obj)
+
+original = {"a": 1, "b": {"c": 2}}
+clone = deep_clone(original)
+print(clone)  # Output: {'a': 1, 'b': {'c': 2}}
+
+# 6. Function to get the keys of an object
+def get_keys(obj):
+    keys = []
+    for key in obj:
+        keys.append(key)
+    return keys
+
+print(get_keys({"a": 1, "b": 2}))  # Output: ['a', 'b']
