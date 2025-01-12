@@ -226,3 +226,29 @@ def count_chars_excluding_spaces(s):
     return count
 
 print(count_chars_excluding_spaces("Hello World"))  # 10
+
+# Question 18: Print even numbers from 1 to 50
+def print_even_numbers():
+    """
+    Write a Python program that prints the even numbers from 1 to 50.
+    """
+    even_numbers = []
+    for num in range(1, 51):
+        if num % 2 == 0:
+            even_numbers.append(num)
+    return even_numbers
+
+print(print_even_numbers())  # [2, 4, 6, ..., 50]
+
+# Question 19: Check if a number is perfect
+def is_perfect_number(n):
+    """
+    Write a Python function that checks if a number is a perfect number.
+    A number is perfect if the sume of all the factors for the number is equal to the number.
+    # Eg: 6 is a perfect number as its factors 1, 2, 3 add up to 6.
+    """
+    total = 0
+    for i in range(1, n):
+        if n % i == 0:
+            total += i
+    return total == n
